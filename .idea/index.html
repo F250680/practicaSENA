@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataformas de Control de Versiones</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: linear-gradient(135deg, #24292e 0%, #2b3137 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .intro {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .platform-card {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .platform-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+        .github-header {
+            background: linear-gradient(135deg, #24292e 0%, #2b3137 100%);
+        }
+        .gitlab-header {
+            background: linear-gradient(135deg, #fc6d26 0%, #e24329 100%);
+        }
+        .bitbucket-header {
+            background: linear-gradient(135deg, #0052cc 0%, #2684ff 100%);
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+        }
+        .comparison {
+            margin-top: 3rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Plataformas de Control de Versiones</h1>
+    <p class="subtitle">Comparación de GitHub, GitLab y Bitbucket</p>
+</header>
+
+<div class="container">
+    <section class="intro">
+        <h2>¿Qué son las Plataformas de Control de Versiones?</h2>
+        <p>Las plataformas de control de versiones permiten a los desarrolladores colaborar en proyectos, gestionar cambios en el código fuente, y mantener un historial completo de las modificaciones. Aunque todas estas plataformas utilizan Git como su sistema de control de versiones subyacente, cada una ofrece características y funcionalidades únicas que las diferencian.</p>
+        <p>En esta página, exploraremos las tres plataformas más populares: GitHub, GitLab y Bitbucket, destacando sus características principales, ventajas y posibles desventajas.</p>
+    </section>
+
+    <section class="platforms">
+        <div class="platform-card">
+            <div class="card-header github-header">
+                <h2>GitHub</h2>
+            </div>
+            <div class="card-content">
+                <p>GitHub es la plataforma de desarrollo colaborativo más grande del mundo. Adquirida por Microsoft en 2018, es conocida por su gran comunidad y su amplio ecosistemas.</p>
+                <h3>Características destacadas:</h3>
+                <ul class="feature-list">
+                    <li>Repositorios públicos y privados</li>
+                    <li>GitHub Actions para CI/CD</li>
+                    <li>GitHub Pages para hosting de sitios web</li>
+                    <li>Discusiones y gestión de problemas</li>
+                    <li>GitHub Codespaces para entornos de desarrollo en la nube</li>
+                    <li>GitHub Copilot (asistente de IA para programación)</li>
+                    <li>Amplia integración con herramientas de terceros</li>
+                </ul>
+                <h3>Ventajas:</h3>
+                <ul class="feature-list">
+                    <li>Comunidad masiva de desarrolladores</li>
+                    <li>Interfaz intuitiva y fácil de usar</li>
+                    <li>Excelente documentación y tutoriales</li>
+                    <li>Repositorios ilimitados</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="platform-card">
+            <div class="card-header gitlab-header">
+                <h2>GitLab</h2>
+            </div>
+            <div class="card-content">
+                <p>GitLab es una plataforma completa de DevOps que ofrece control de versiones, CI/CD, seguridad y más en una única aplicación. Está disponible en versión SaaS y autoalojada.</p>
+                <h3>Características destacadas:</h3>
+                <ul class="feature-list">
+                    <li>Sistema integrado de CI/CD</li>
+                    <li>Gestión completa del ciclo de vida DevOps</li>
+                    <li>Versión Community Edition (código abierto)</li>
+                    <li>Registros de contenedores y paquetes</li>
+                    <li>Análisis de seguridad y cumplimiento</li>
+                    <li>Wiki y gestión de documentación</li>
+                    <li>Métricas de rendimiento y planificación</li>
+                </ul>
+                <h3>Ventajas:</h3>
+                <ul class="feature-list">
+                    <li>Solución todo en uno para DevOps</li>
+                    <li>Mayor control con la versión autoalojada</li>
+                    <li>Potentes herramientas de CI/CD integradas</li>
+                    <li>Enfoque en la seguridad y cumplimiento</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="platform-card">
+            <div class="card-header bitbucket-header">
+                <h2>Bitbucket</h2>
+            </div>
+            <div class="card-content">
+                <p>Bitbucket es la solución de control de versiones de Atlassian que se integra perfectamente con otras herramientas de la compañía como Jira y Confluence. Es especialmente popular entre equipos empresariales.</p>
+                <h3>Características destacadas:</h3>
+                <ul class="feature-list">
+                    <li>Repositorios Git y Mercurial (aunque este último está siendo descontinuado)</li>
+                    <li>Bitbucket Pipelines para CI/CD</li>
+                    <li>Integración nativa con Jira, Trello y Confluence</li>
+                    <li>Revisiones de código y aprobaciones</li>
+                    <li>Despliegues y entornos</li>
+                    <li>Permisos detallados por proyecto</li>
+                    <li>Versión Data Center para empresas</li>
+                </ul>
+                <h3>Ventajas:</h3>
+                <ul class="feature-list">
+                    <li>Excelente para equipos que ya usan productos Atlassian</li>
+                    <li>Plan gratuito generoso para equipos pequeños</li>
+                    <li>Modelo de permisos granular</li>
+                    <li>Interfaz limpia y ordenada</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <h2>Comparación detallada</h2>
+        <p>Cada plataforma tiene sus puntos fuertes y débiles. Esta comparación te ayudará a decidir cuál se adapta mejor a tus necesidades:</p>
+
+        <table>
+            <tr>
+                <th>Característica</th>
+                <th>GitHub</th>
+                <th>GitLab</th>
+                <th>Bitbucket</th>
+            </tr>
+            <tr>
+                <td>Repositorios privados gratuitos</td>
+                <td>Ilimitados (hasta 3 colaboradores)</td>
+                <td>Ilimitados</td>
+                <td>Hasta 5 usuarios</td>
+            </tr>
+            <tr>
+                <td>CI/CD</td>
+                <td>GitHub Actions</td>
+                <td>GitLab CI/CD (integrado)</td>
+                <td>Bitbucket Pipelines</td>
+            </tr>
+            <tr>
+                <td>Autoalojamiento</td>
+                <td>GitHub Enterprise</td>
+                <td>GitLab Community/Enterprise Edition</td>
+                <td>Bitbucket Data Center</td>
+            </tr>
+            <tr>
+                <td>Integración con gestión de proyectos</td>
+                <td>GitHub Projects</td>
+                <td>GitLab Issues</td>
+                <td>Jira (integración nativa)</td>
+            </tr>
+            <tr>
+                <td>Enfoque principal</td>
+                <td>Colaboración y código abierto</td>
+                <td>DevOps completo</td>
+                <td>Integración con herramientas Atlassian</td>
+            </tr>
+            <tr>
+                <td>Comunidad</td>
+                <td>Muy grande</td>
+                <td>Grande y creciendo</td>
+                <td>Mediana</td>
+            </tr>
+            <tr>
+                <td>Documentación</td>
+                <td>Excelente</td>
+                <td>Muy buena</td>
+                <td>Buena</td>
+            </tr>
+            <tr>
+                <td>Modelo de precios</td>
+                <td>Por usuario</td>
+                <td>Por usuario (con tiers)</td>
+                <td>Por usuario (con límites de usuarios)</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="intro">
+        <h2>¿Cuál elegir?</h2>
+        <p><strong>GitHub</strong> es ideal si buscas una gran comunidad, colaboración abierta y una interfaz limpia e intuitiva.</p>
+        <p><strong>GitLab</strong> es la mejor opción si necesitas una solución DevOps completa con CI/CD potente y la posibilidad de autoalojamiento con todas las características.</p>
+        <p><strong>Bitbucket</strong> destaca cuando ya utilizas otras herramientas de Atlassian como Jira y necesitas una integración perfecta entre ellas.</p>
+        <p>Muchos equipos y organizaciones utilizan una combinación de estas plataformas según las necesidades específicas de cada proyecto.</p>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>Esta página es parte de un proyecto de aprendizaje sobre plataformas de control de versiones.</p>
+    <p>© 2025 - Creado como ejemplo educativo</p>
+</footer>
+</body>
+</html>
